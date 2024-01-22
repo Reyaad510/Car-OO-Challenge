@@ -35,3 +35,23 @@ let myFirstCar = new Car("Lexus", "ES300", 2004);
 // console.log(myFirstCar.honk());
 // console.log(myFirstCar.toString());
 // console.log(myFirstCar.numWheels);
+
+// Part Three
+class Motorcycle extends Car {
+  constructor(make, model, year, numWheels = 2) {
+    super(make, model, year, numWheels);
+  }
+
+  revEngine() {
+    return "VROOM!!!";
+  }
+}
+
+let myFirstMotorcycle = new Motorcycle("Honda", "Nighthawk", 2000);
+
+myFirstMotorcycle.toString();
+// "The vehicle is a Honda Nighthawk from 2000."
+
+console.log(myFirstMotorcycle.honk()); // "Beep."
+console.log(myFirstMotorcycle.revEngine()); // "VROOM!!!"
+console.log(myFirstMotorcycle.numWheels); // 2
